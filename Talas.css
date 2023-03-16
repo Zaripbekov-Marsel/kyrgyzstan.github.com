@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  
+}
+html{
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width:100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+body{
+  width: 100%;
+  max-width:100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+.title::selection, .ssubtitle::selection, .menu__item::selection, .subtitle::selection, .new_title::selection, b::selection, .regist::selection, .header__li::selection{
+  background-color: darkgoldenrod;
+}
+.header{
+  width:100%;
+  position:fixed;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+  background: #00000010;
+}
+.container{
+  max-width:1920px;
+  margin:0 auto;
+  padding: 35px 63px;
+}
+.header__box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  width: 60px;
+}
+.header__img{
+  display: none;
+}
+.hamburger-menu{
+  display: none;
+}
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 35px;
+  right: 63px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: calc(60px + 440 * (100vw / 1100));
+  height: 100%;
+  margin: 0;
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(to right,darkslategrey, black, dimgrey);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+.menu__item{
+  display: block;
+  padding: 16px 29px;
+  color: whitesmoke;
+  font-size: calc(8px + 10 * (100vw / 1100));
+  font-weight: 600;
+}
+.menu__item:hover {
+  background:chocolate;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+.header__ul{
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+}
+.header__li{
+  color: white;
+  order: 2;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.header__li:hover{
+  background: chocolate;
+  border-radius: 10px;
+  border: 5px solid chocolate;
+}
+.ssubtitle{
+  font-size:calc(8px + 8 * (100vw / 1440));
+  color: white;
+  font-weight: 300;
+}
+.subtitle{
+  font-size:calc(10px + 14 * (100vw / 1440));
+  color: white;
+  font-weight: 300;
+  border-radius: 25px;
+  background: #4d4d4d75;
+}
+.regist{
+  color: whitesmoke;
+}
+.header__colum-gap{
+  display: flex;
+  column-gap: 15px;
+  transition: 0.1s;
+}
+.header__colum-gap:hover{
+  background: chocolate;
+  border-radius: 10px;
+  border: 5px solid chocolate;
+}
+.Talas{
+  width:100%;
+  max-width: 100%;
+  background:url("./image/1620px-Talas\,_Kyrgyzstan_-_panoramio_\(1\).jpg");
+  background-position:center;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px 0 100px;
+}
+.title{
+  font-size: calc(60px + 60 * (100vw / 1440));
+  font-weight: 400;
+  color:white ;
+}
+.Talas__box{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  padding: 80px 0 100px;
+}
+.karavan{
+  width:100%;
+  max-width: 100%;
+  background:url("./image/zapovednik.jpg");
+  background-position:center;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+.manas{
+  width:100%;
+  max-width: 100%;
+  background:url("./image/manas-town.jpg");
+  background-position:center;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+.river{
+  width:100%;
+  max-width: 100%;
+  background:url("./image/five-rock.jpg");
+  background-position:center;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+.new_title{
+  color: lightyellow;
+  font-weight: 900;
+  font-size: calc(28px + 32 * (100vw / 1440));
+}
+.img{
+  border: 3px solid white;
+  border-radius: 15px;
+  width: calc(300px + 400 * (100vw / 1440));
+  height: calc(100px + 250 * (100vw / 1440));
+}
+.box{
+  display: flex;
+  align-items: center;
+  column-gap: calc(40px + 20 * (100vw / 1440));
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(30px + 30 * (100vw / 1440));
+}
+footer{
+  width:100%;
+  max-width: 100%;
+  background:black;
+  background-position:center;
+  background-size:cover;
+}
+.footer__box{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__contact{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  text-align: center;
+}
+.footer__company-icons{
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+.footer__under{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#icon{
+  transition: 100ms;
+}
+#icon:hover{
+  fill: red;
+}
+@media(max-width:1100px){
+  .hamburger-menu{
+    display: flex;
+  }
+  .header__ul, .header__colum-gap{
+    display: none;
+  }
+}
+@media(max-width:1000px){
+  .box{
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(24px + 16 * (100vw / 1000));
+  }
+  .img{
+    height: auto;
+    width: 100%;
+  }
+}
+@media(max-width:600px){
+  .footer__box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+}
+@media(max-width:400px){
+  .container{
+    padding: 15px 10px;
+  }
+  .menu__btn {
+    top: 15px;
+    right: 10px;
+  }
+}
