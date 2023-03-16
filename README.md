@@ -1,1 +1,0 @@
-# kyrgyzstan.github.com
